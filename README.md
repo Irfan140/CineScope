@@ -1,4 +1,4 @@
-# 🎬 Movie Discovery App
+# 🎬 CineScope
 
 A modern, feature-rich movie discovery application built with React Native and Expo, featuring trending movies, search functionality, and detailed movie information powered by The Movie Database (TMDB) API and Appwrite.
 

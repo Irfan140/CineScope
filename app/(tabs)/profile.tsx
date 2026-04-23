@@ -14,26 +14,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
-const StatCard = ({ icon, label, value, color }: StatCardProps) => (
-  <View className="flex-1 bg-dark-100 rounded-xl p-4 items-center">
-    <View
-      className={`rounded-full p-3 mb-3`}
-      style={{ backgroundColor: `${color}20` }}
-    >
-      <Image source={icon} className="size-6" tintColor={color} />
-    </View>
-    <Text className="text-2xl text-white font-bold mb-1">{value}</Text>
-    <Text className="text-light-300 text-xs text-center">{label}</Text>
-  </View>
-);
-
-const InfoRow = ({ label, value }: InfoRowProps) => (
-  <View className="flex-row justify-between items-center py-4 border-b border-dark-100">
-    <Text className="text-light-300 text-sm">{label}</Text>
-    <Text className="text-white text-sm font-semibold">{value}</Text>
-  </View>
-);
+import StatCard from "@/components/StatCard";
 
 const Profile = () => {
   const [savedCount, setSavedCount] = useState(0);
@@ -141,7 +122,7 @@ const Profile = () => {
           />
           <StatCard
             icon={icons.star}
-            label="Trending Tracked"
+            label="Trending Count"
             value={trendingCount}
             color="#FBBF24"
           />
